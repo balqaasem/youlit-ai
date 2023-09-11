@@ -29,7 +29,7 @@ class LlamaCPPInvocationLayer(PromptModelInvocationLayer):
         **kwargs):
 
         """
-        Creates a new Llama CPP InvocationLayer instance.
+        Creates a new 🦙Llama CPP InvocationLayer instance.
         :param model_name_or_path: The name or path of the underlying model.
         :param kwargs: See `https://abetlen.github.io/llama-cpp-python/#llama_cpp.llama.Llama.__init__`. For max_length, we use the 128 'max_tokens' setting.
         """
@@ -107,7 +107,7 @@ class LlamaCPPInvocationLayer(PromptModelInvocationLayer):
         if kwargs and "prompt" in kwargs:
             prompt = kwargs.pop("prompt")
 
-            # For more details refer to call documentation for Llama CPP https://abetlen.github.io/llama-cpp-python/#llama_cpp.llama.Llama.__call__
+            # For more details refer to call documentation for 🦙Llama CPP https://abetlen.github.io/llama-cpp-python/#llama_cpp.llama.Llama.__call__
             model_input_kwargs = {
                 key: kwargs[key]
                 for key in [
